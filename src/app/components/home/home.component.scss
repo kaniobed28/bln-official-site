@@ -1,0 +1,319 @@
+
+/* Global variables for consistent theming */
+:root {
+  --primary-color: #4a3c6b; /* Deep purple */
+  --accent-color: #7e57c2; /* Brighter purple */
+  --hover-color: #9575cd; /* Hover purple */
+  --light-bg: #f5f5f5; /* Light background */
+  --text-color: #333; /* Dark text */
+  --white: #ffffff; /* White */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 2rem;
+
+  .hero-content {
+    max-width: 900px;
+    padding: 2rem;
+    animation: fadeIn 1s ease-in; /* Subtle fade-in animation */
+
+    .hero-logo {
+      height: 100px;
+      width: auto;
+      max-width: 250px;
+      object-fit: contain;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+      font-family: 'Georgia', serif; /* Elegant font for titles */
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      background-color: var(--accent-color);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background-color: var(--hover-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+/* Welcome Section */
+.welcome {
+  padding: 5rem 2rem;
+  background-color: var(--light-bg);
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      font-family: 'Georgia', serif;
+      margin-bottom: 1.5rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        background-color: var(--accent-color);
+        display: block;
+        margin: 0.5rem auto;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* Events Section */
+.events {
+  padding: 5rem 2rem;
+  background-color: var(--white);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      text-align: center;
+      font-family: 'Georgia', serif;
+      margin-bottom: 2rem;
+
+      &::after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        background-color: var(--accent-color);
+        display: block;
+        margin: 0.5rem auto;
+      }
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+
+      .event-card {
+        background-color: var(--light-bg);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        h3 {
+          font-size: 1.6rem;
+          color: var(--primary-color);
+          margin-bottom: 0.75rem;
+        }
+
+        p {
+          font-size: 1rem;
+          color: var(--text-color);
+          margin-bottom: 1rem;
+          line-height: 1.5;
+
+          strong {
+            color: var(--accent-color);
+          }
+        }
+
+        .event-link {
+          color: var(--accent-color);
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 1rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Call-to-Action Section */
+.cta {
+  padding: 5rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+      margin-bottom: 1.5rem;
+
+      &::after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        background-color: var(--white);
+        display: block;
+        margin: 0.5rem auto;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      background-color: var(--accent-color);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background-color: var(--hover-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+/* Animation for Hero Section */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 1rem;
+
+    .hero-content {
+      .hero-logo {
+        height: 70px;
+        max-width: 200px;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .welcome, .events, .cta {
+    padding: 3rem 1rem;
+
+    .container {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .events {
+    .events-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    .hero-content {
+      .hero-logo {
+        height: 60px;
+        max-width: 150px;
+      }
+
+      .hero-title {
+        font-size: 1.8rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
