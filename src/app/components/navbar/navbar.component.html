@@ -1,0 +1,39 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <a class="navbar-logo" routerLink="/">
+      <img src="assets/bln-logo.png" alt="BLN - Birthing Lovers Network Logo" class="logo-image">
+      <span class="logo-text">BLN</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="navbar-menu" [ngClass]="{'open': isMenuOpen}">
+      <li class="navbar-item">
+        <a class="navbar-link" routerLink="/" (click)="toggleMenu()">Home</a>
+      </li>
+      <li class="navbar-item">
+        <a class="navbar-link" routerLink="/about" (click)="toggleMenu()">About</a>
+      </li>
+      <li class="navbar-item">
+        <a class="navbar-link" routerLink="/events" (click)="toggleMenu()">Events</a>
+      </li>
+      <li class="navbar-item">
+        <a class="navbar-link" routerLink="/ministries" (click)="toggleMenu()">Ministries</a>
+      </li>
+      <li class="navbar-item">
+        <a class="navbar-link" routerLink="/contact" (click)="toggleMenu()">Contact</a>
+      </li>
+      <li class="navbar-item">
+        <a class="navbar-link donate" routerLink="/donate" (click)="toggleMenu()">Donate</a>
+      </li>
+    </ul>
+
+    <!-- Hamburger Menu for Mobile -->
+    <div class="hamburger" (click)="toggleMenu()" [ngClass]="{'open': isMenuOpen}">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+

@@ -1,0 +1,42 @@
+<section class="hero">
+  <div class="hero-content">
+    <img src="assets/bln-logo.png" alt="BLN - Birthing Lovers Network Logo" class="hero-logo">
+    <h1 class="hero-title">Welcome to BLN - Birthing Lovers Network</h1>
+    <p class="hero-subtitle">A community dedicated to spreading love, faith, and unity.</p>
+    <a routerLink="/join" class="cta-button">Join Our Community</a>
+  </div>
+</section>
+
+<section class="welcome">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <p>
+      At BLN, we are committed to birthing a network of love and faith, where every individual is
+      empowered to grow spiritually and serve our community. Join us as we worship, connect, and
+      make a difference together.
+    </p>
+  </div>
+</section>
+
+<section class="events">
+  <div class="container">
+    <h2>Upcoming Events</h2>
+    <div class="events-grid">
+      <div *ngFor="let event of events" class="event-card">
+        <h3>{{ event.title }}</h3>
+        <p><strong>Date:</strong> {{ event.date }} | <strong>Time:</strong> {{ event.time }}</p>
+        <p>{{ event.description }}</p>
+        <a routerLink="/events" class="event-link">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Support Our Mission</h2>
+    <p>Your generosity helps us continue the Kingdom assignment.</p>
+    <a routerLink="/donate" class="cta-button">Donate Now</a>
+  </div>
+</section>
+
