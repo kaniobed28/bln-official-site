@@ -32,7 +32,6 @@ export class EventsComponent implements OnInit, AfterViewInit { // Implement Aft
     In summary, Sermon On The Mount is the Mountain of the LORD'S house where He becomes our God and we, His people; where He becomes our Father and we, His children.
   `;
 
-  // Query all elements that have the 'animate-on-scroll' class
   @ViewChildren('animatedElement')
   animatedElements!: QueryList<ElementRef>;
 
@@ -47,29 +46,29 @@ export class EventsComponent implements OnInit, AfterViewInit { // Implement Aft
 
   initIntersectionObserver(): void {
     const options = {
-      root: null, // viewport
+      root: null,
       rootMargin: '0px',
-      threshold: 0.1 // Trigger when 10% of the element is visible
+      threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Add 'is-visible' class when element enters viewport
           (entry.target as HTMLElement).classList.add('is-visible');
-          // Optional: Stop observing after animation to only animate once
           observer.unobserve(entry.target);
         }
       });
     }, options);
 
-    // Observe all elements found by @ViewChildren
     this.animatedElements.forEach(element => {
       observer.observe(element.nativeElement);
     });
   }
 
+  /**
+   * Redirects the user to the Google Form for registration.
+   */
   registerForEvent(): void {
-    alert('Thank you for your interest! Registration for Sermon On The Mount is coming soon.');
+    window.open('https://forms.gle/5gX22zAbkdpY2zcQ8', '_blank');
   }
 }
