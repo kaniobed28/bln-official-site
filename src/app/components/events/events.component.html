@@ -1,0 +1,48 @@
+<section class="events-page">
+  <div class="container">
+    <div class="event-header hidden-animation fade-down" #animatedElement>
+      <h2 class="event-title">{{ eventName }}</h2>
+      <p class="event-theme">{{ eventTheme }} <span class="scripture">({{ themeScripture }})</span></p>
+    </div>
+
+    <div class="event-info-main hidden-animation fade-up" #animatedElement style="animation-delay: 0.2s;">
+      <div class="info-item">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Date: <strong>{{ eventDate }}</strong></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-clock"></i>
+        <span>Time: <strong>{{ eventTime }}</strong></span>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Venue: <strong>{{ eventVenue }}</strong></span>
+      </div>
+    </div>
+
+    <div class="event-flyer hidden-animation zoom-in" #animatedElement style="animation-delay: 0.4s;">
+      <img
+        src="assets/sermon-on-the-mount-flyer.jpg"
+        alt="Sermon On The Mount 2025 Event Flyer"
+        class="flyer-image"
+      />
+    </div>
+
+    <div class="event-speakers card hidden-animation fade-right" #animatedElement style="animation-delay: 0.6s;">
+      <h3>Key Speakers</h3>
+      <div class="speakers-grid">
+        <div *ngFor="let speaker of eventHosts; let i = index" class="speaker-item hidden-animation fade-up" #animatedElement [style.animation-delay]="'0.' + (8 + i) + 's'">
+          <i class="fas fa-microphone"></i>
+          <span>{{ speaker }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-description card hidden-animation fade-left" #animatedElement style="animation-delay: 1s;">
+      <h3>About Sermon On The Mount</h3>
+      <p>{{ sermonOnTheMountDescription }}</p>
+
+      <button class="register-button hidden-animation zoom-in" #animatedElement style="animation-delay: 1.2s;" (click)="registerForEvent()">Register Now</button>
+    </div>
+  </div>
+</section>

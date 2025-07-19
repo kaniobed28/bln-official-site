@@ -7,12 +7,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
+import { EventsComponent } from './components/events/events.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  // { path: 'events', component: EventsComponent },
+  { path: 'events', component: EventsComponent },
   // { path: 'ministries', component: MinistriesComponent },
   // { path: 'contact', component: ContactComponent },
   // { path: 'donate', component: DonateComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
