@@ -38,6 +38,18 @@
   <div class="container">
     <h2>Support Our Mission</h2>
     <p>Your generosity helps us continue the Kingdom assignment.</p>
-    <a routerLink="/donate" class="cta-button">Donate Now</a>
+    <button onclick="document.getElementById('donateDialog').style.display='block'" class="cta-button">Donate Now</button>
   </div>
 </section>
+
+<div id="donateDialog" class="dialog-box" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000; text-align: center;">
+  <h2>Donations</h2>
+  <p><strong>Bank:</strong> Zenith Bank</p>
+  <p><strong>Acc. Name:</strong> Bernard Akwasi Bafoe</p>
+  <p><strong>Acc. Number:</strong> 4011081132</p>
+  <p><strong>Branch:</strong> Adum, Kumasi</p>
+  <hr>
+  <p><strong>MTN Mobile Money:</strong></p>
+  <p>0552413005 (Bernard Akwasi Bafoe)</p>
+  <button onclick="document.getElementById('donateDialog').style.display='none'" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Close</button>
+</div>

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-navbar',
   standalone: false,
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']  // <-- ici pluriel
 })
 export class NavbarComponent {
   // Mobile menu state

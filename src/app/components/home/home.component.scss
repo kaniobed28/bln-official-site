@@ -1,4 +1,3 @@
-
 /* Global variables for consistent theming */
 :root {
   --primary-color: #4a3c6b; /* Deep purple */
@@ -238,6 +237,68 @@
   }
 }
 
+/* Dialog Backdrop and Box */
+.dialog-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+}
+
+.dialog-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 350px;
+  width: 90%;
+  z-index: 1200;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeInScale 0.3s ease;
+
+  h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+  }
+
+  p {
+    margin: 8px 0;
+    color: var(--text-color);
+    font-size: 0.95rem;
+  }
+
+  hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: var(--hover-color);
+    }
+  }
+}
+
 /* Animation for Hero Section */
 @keyframes fadeIn {
   from {
@@ -247,6 +308,18 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Animation for Dialog */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -296,6 +369,24 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .dialog-box {
+    max-width: 300px;
+    padding: 15px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    button {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -315,5 +406,17 @@
       }
     }
   }
-}
 
+  .dialog-box {
+    max-width: 280px;
+    padding: 12px;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+}
