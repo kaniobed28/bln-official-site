@@ -7,10 +7,23 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  // Optional: Add a property to handle mobile menu toggle
+  // Mobile menu state
   isMenuOpen = false;
+
+  // Donate dialog state
+  isDonateDialogOpen = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  openDonateDialog(event: Event) {
+    event.preventDefault(); // Prevent navigation
+    this.isDonateDialogOpen = true;
+    this.isMenuOpen = false; // Close menu if open
+  }
+
+  closeDonateDialog() {
+    this.isDonateDialogOpen = false;
   }
 }

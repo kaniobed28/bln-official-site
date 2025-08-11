@@ -24,7 +24,7 @@
         <a class="navbar-link" routerLink="/contact" (click)="toggleMenu()">Contact</a>
       </li>
       <li class="navbar-item">
-        <a class="navbar-link donate" routerLink="/donate" (click)="toggleMenu()">Donate</a>
+        <a class="navbar-link donate" href="#" (click)="openDonateDialog($event)">Donate</a>
       </li>
     </ul>
 
@@ -37,3 +37,18 @@
   </div>
 </nav>
 
+<!-- Backdrop -->
+<div class="dialog-backdrop" *ngIf="isDonateDialogOpen" (click)="closeDonateDialog()"></div>
+
+<!-- Dialog -->
+<div class="dialog-box" *ngIf="isDonateDialogOpen">
+  <h2>Donations</h2>
+  <p><strong>Bank:</strong> Zenith Bank</p>
+  <p><strong>Acc. Name:</strong> Bernard Akwasi Bafoe</p>
+  <p><strong>Acc. Number:</strong> 4011081132</p>
+  <p><strong>Branch:</strong> Adum, Kumasi</p>
+  <hr>
+  <p><strong>MTN Mobile Money:</strong></p>
+  <p>0552413005 (Bernard Akwasi Bafoe)</p>
+  <button (click)="closeDonateDialog()">Close</button>
+</div>

@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { EventsComponent } from './components/events/events.component';
+// import { DonateDialogComponent } from './donate-dialog/donate-dialog.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    EventsComponent
+    EventsComponent,
+    // DonateDialogComponent,
   ],
   imports: [
     BrowserModule,
