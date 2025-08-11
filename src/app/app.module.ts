@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { EventsComponent } from './components/events/events.component';
+import { ContactComponent } from './components/contact/contact.component';
 // import { DonateDialogComponent } from './donate-dialog/donate-dialog.component';
 
 
@@ -15,8 +16,9 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'events', component: EventsComponent },
+  { path: 'contact', component: ContactComponent },
+
   // { path: 'ministries', component: MinistriesComponent },
-  // { path: 'contact', component: ContactComponent },
   // { path: 'donate', component: DonateComponent },
 ];
 @NgModule({
@@ -25,6 +27,7 @@ const routes: Routes = [
     NavbarComponent,
     HomeComponent,
     EventsComponent,
+    ContactComponent,
     // DonateDialogComponent,
   ],
   imports: [
