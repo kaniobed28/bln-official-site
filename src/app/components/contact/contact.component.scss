@@ -25,14 +25,80 @@
         text-decoration: none;
         font-size: 1.2rem;
         font-weight: bold;
-        color: #7e57c2;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
         padding: 0.5rem 1rem;
         border-radius: 5px;
         transition: all 0.3s ease;
 
-        &:hover {
-          background-color: #7e57c2;
-          color: white;
+        i {
+          font-size: 1.6rem;
+        }
+
+        /* YouTube */
+        &.youtube {
+          color: #ff0000;
+
+          i {
+            color: #ff0000;
+          }
+
+          &:hover {
+            background-color: #ff0000;
+            color: #fff;
+
+            i {
+              color: #fff;
+            }
+          }
+        }
+
+        /* Instagram (gradient on icon) */
+        &.instagram {
+          color: #d6249f; // fallback
+
+          i {
+            background: radial-gradient(
+              circle at 30% 107%,
+              #fdf497 0%,
+              #fdf497 5%,
+              #fd5949 45%,
+              #d6249f 60%,
+              #285aeb 90%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          &:hover {
+            background: #d6249f;
+            color: #fff;
+
+            i {
+              background: none;
+              color: #fff;
+              -webkit-text-fill-color: #fff;
+            }
+          }
+        }
+
+        /* Telegram */
+        &.telegram {
+          color: #0088cc;
+
+          i {
+            color: #0088cc;
+          }
+
+          &:hover {
+            background-color: #0088cc;
+            color: #fff;
+
+            i {
+              color: #fff;
+            }
+          }
         }
       }
     }
